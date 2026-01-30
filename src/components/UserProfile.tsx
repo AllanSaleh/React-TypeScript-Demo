@@ -8,7 +8,7 @@ const UserProfile = ({ user } : {user : User}) => {
 
   const users: User[] = [];
   users.push(user);
-  users.push({name: "bob", age:28, email:"bob@gmail.com"});
+  // users.push({name: "bob", age:28, email:"bob@gmail.com"});
 
   return (
     <div>
