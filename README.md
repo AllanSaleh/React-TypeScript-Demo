@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Tailwind CSS In-Class Practice 🧩
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Goal
+Practice using **Tailwind CSS utility classes** to style a simple React component.
 
-Currently, two official plugins are available:
+There is **no single correct solution** — this is about getting comfortable with Tailwind.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## What You Are Building
+You will style a **simple product card** that includes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- An image  
+- A product title  
+- A product description  
+- A button  
 
-## Expanding the ESLint configuration
+You will use **Tailwind CSS classes only** (no custom CSS).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Starter Component
+You will be given a basic React component like this:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```tsx
+const Card = () => {
+  return (
+    <div>
+      <img src="https://via.placeholder.com/150" alt="Product" />
+      <h2>Product Title</h2>
+      <p>This is a short product description.</p>
+      <button>Buy Now</button>
+    </div>
+  );
+};
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+export default Card;
 ```
+Your Task 🎨
+Style the card using Tailwind CSS.
+You should:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Add padding and margin
+- Style text (size, weight, color)
+- Add a background color
+- Round corners
+- Add hover effects
+- Style the button
+- Make it look like a real product card
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+💡 You are encouraged to:
+- Use flex or grid
+- Use hover: and transition
+- Experiment with colors and shadows
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Rules
+- ✅ Use Tailwind utility classes only
+- ❌ No custom CSS files
+- ❌ No copying someone else’s design
+- ✅ Be creative
+
+
+Setting Up Tailwind (Vite + React)
+
+Follow the official Tailwind documentation for setting up Tailwind with Vite:
+👉 https://tailwindcss.com/docs/installation/using-vite
+
+Carefully follow all steps on that page before starting the assignment.
+
+Submission
+- Your card should be fully styled
+- Be ready to explain why you chose certain Tailwind classes
+
+Bonus (Optional ⭐)
+- Add a hover animation to the card
+- Make the button change color on hover
+- Center the card on the page
